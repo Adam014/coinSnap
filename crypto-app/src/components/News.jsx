@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Homepage() {
+const News = () => {
   return (
     <div>
         News
     </div>
   )
 }
+
+export default News

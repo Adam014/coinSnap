@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Homepage() {
+const Exchanges = () => {
   return (
     <div>
         Exchanges
     </div>
   )
 }
+
+export default Exchanges

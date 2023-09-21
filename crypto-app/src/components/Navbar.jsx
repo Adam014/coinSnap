@@ -5,7 +5,7 @@ import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOut
 
 import cryptoLogo from '../images/cryptoLogo.png';
 
-export default function Navbar(){
+const Navbar = () => {
     return ( 
         <div className="nav-container">
             <div className="logo-container">
@@ -33,3 +33,5 @@ export default function Navbar(){
         </div>
     )
 }
+
+export default Navbar

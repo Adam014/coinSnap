@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Homepage() {
+const CryptoDetails = () => {
   return (
     <div>
         CryptoDetails
     </div>
   )
 }
+
+export default CryptoDetails

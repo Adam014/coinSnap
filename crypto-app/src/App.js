@@ -5,7 +5,7 @@ import './App.sass';
 
 import { Navbar, Exchanges, Homepage, CryptoDetails, Cryptocurrencies, News } from './components';
 
-export default function App() {
+const App = () => {
   return (
     <div className="App">
         <div className='navbar'>
@@ -25,8 +25,11 @@ export default function App() {
             </Layout>
         </div>
         <div className='footer' level={5} >
+          Copyright © 2021
           <Typography.Title>
-              CryptoApp 
+              <Link to="/">
+                  CryptoApp
+              </Link>
               <br/>
               All rights reserved.
           </Typography.Title>
@@ -39,3 +42,5 @@ export default function App() {
     </div>
   )
 }
+
+export default App

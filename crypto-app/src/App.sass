@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
 
 $goldText : #D7B500
+$darkGoldText: #FFA000
 $white : #fff
 $mainBackground : #272B2D
 $navbarBackground : #1F2426
@@ -12,7 +13,7 @@ $navbarBackground : #1F2426
   font-family: 'Bebas Neue', sans-serif
 
 a:hover
-  color: $goldText !important
+  color: $darkGoldText !important
 
 .app
   display: flex
@@ -25,9 +26,12 @@ a:hover
 .main
   flex: 0.8
   width: 100%
+  padding-left: 200px
+
 
 .routes
   padding: 20px
+  background: $mainBackground
 
 .nav-container
   position: fixed
@@ -39,6 +43,25 @@ a:hover
 
 .ant-menu
   background-color: $navbarBackground
+
+:where(.css-dev-only-do-not-override-1vr7spz).ant-menu-dark
+  .ant-menu-item-selected, > .ant-menu .ant-menu-item-selected
+    background-color: $goldText
+
+a:where(.css-dev-only-do-not-override-1vr7spz).ant-typography, :where(.css-dev-only-do-not-override-1vr7spz).ant-typography a
+  color: $darkGoldText
+
+\:where(.css-dev-only-do-not-override-1vr7spz).ant-col-12
+  max-width: 34%
+
+.ant-statistic-content-value-int
+  color: $darkGoldText
+
+.ant-typography
+  color: $white
+
+\:where(.css-dev-only-do-not-override-1vr7spz).ant-statistic .ant-statistic-title
+  color: $white
 
 .logo-container
   background-color: $navbarBackground
@@ -69,18 +92,6 @@ a:hover
 
 .crypto-element
   color: $goldText
-
-@media screen and (max-width: 1300px)
-  .main
-    margin-left: 50px
-
-@media screen and (max-width: 1170px)
-  .main
-    margin-left: 50px
-
-@media screen and (max-width: 1000px)
-  .main
-    margin-left: 100px
 
 @media screen and (max-width: 800px)
   .app
