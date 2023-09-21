@@ -24,8 +24,17 @@ export default function App() {
                 </div>
             </Layout>
         </div>
-        <div className='footer'>
-
+        <div className='footer' level={5} >
+          <Typography.Title>
+              CryptoApp 
+              <br/>
+              All rights reserved.
+          </Typography.Title>
+          <Space>
+              <Link to="/">Home</Link>
+              <Link to="/exchanges">Exchanges</Link>
+              <Link to="/news">News</Link>
+          </Space>
         </div>
     </div>
   )
