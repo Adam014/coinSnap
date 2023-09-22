@@ -27,7 +27,7 @@ const App = () => {
         <div className='footer' level={5} >
           Copyright © 2021
           <Typography.Title>
-              <Link to="/">
+              <Link to="/" className='footer-link'>
                   CryptoApp
               </Link>
               <br/>
