@@ -10,7 +10,10 @@ const { Title } = Typography
 
 const Homepage = () => {
 
+  // data z API, max 10 elements 
   const {data, isFetching} = useGetCryptoQuery(10);
+
+  // statistiky z API
   const globalStats = data?.data?.stats
 
   if(isFetching) return 'Loading...';
