@@ -2,7 +2,25 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Col, Row, Typography } from 'antd';
-import Chart from 'chart.js/auto';
+import moment from 'moment';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Tooltip,
+  Legend
+);
 
 const { Title } = Typography;
 
@@ -15,35 +33,38 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   }
 
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
-    coinTimestamp.push(new Date(coinHistory?.data?.history[i].timestamp).toLocaleDateString());
+    coinTimestamp.push(moment.unix(coinHistory?.data?.history[i].timestamp).format('DD-MM-YYYY'));
   }
 
-  console.log(coinTimestamp)
-
-  const data = {
-    labels: coinTimestamp,
-    datasets: [
+const data = {
+  labels: coinTimestamp.reverse(),
+  datasets: [
       {
-        label: 'Price In USD',
-        data: coinPrice,
+        label: `Price of ${coinName} in USD`,
+        data: coinPrice.reverse(),
         fill: false,
-        backgroundColor: '#0071bd',
-        borderColor: '#0071bd',
+        backgroundColor: "#D7B500",
+        borderColor: "#D7B500",
+      },
+  ],
+};
+
+const options = {
+  elements: {
+    point:{
+      radius: 3
+    }
+  },
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+        },
       },
     ],
-  };
-
-  const options = {
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
-    },
-  };
+  },
+};
 
   return (
     <>
