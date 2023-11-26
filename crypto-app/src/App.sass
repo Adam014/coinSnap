@@ -3,7 +3,6 @@
 $goldText : #D7B500
 $darkGoldText: #FFA000
 $white : #fff
-$mainBackground : #272B2D
 $navbarBackground : #1F2426
 
 *
@@ -31,9 +30,7 @@ a:hover
 
 .routes
   padding: 20px
-  background: $mainBackground
   h3
-    color: $white
 
 .nav-container
   position: fixed
@@ -64,7 +61,7 @@ a:where(.css-dev-only-do-not-override-1vr7spz).ant-typography, :where(.css-dev-o
   color: $white
 
 \:where(.css-dev-only-do-not-override-1vr7spz).ant-statistic .ant-statistic-title
-  color: $white
+  color: black
 
 .logo-container
   background-color: $navbarBackground
@@ -84,7 +81,6 @@ a:where(.css-dev-only-do-not-override-1vr7spz).ant-typography, :where(.css-dev-o
   right: 10px !important
   top: 25px !important
   font-size: 1.2rem !important
-  background-color: $mainBackground !important
   border: none !important
 
 .loader
@@ -291,8 +287,6 @@ a:where(.css-dev-only-do-not-override-1vr7spz).ant-typography, :where(.css-dev-o
   gap: 50px
   color: #0071bd
 
-.chart-title
-  color: #0071bd !important
 
 .price-container
   display: flex !important
@@ -347,7 +341,6 @@ a:where(.css-dev-only-do-not-override-1vr7spz).ant-typography, :where(.css-dev-o
   text-align: center
 
   h1
-
     color: $white
     font-family: 'Bebas Neue', sans-serif
 
@@ -358,11 +351,9 @@ a:where(.css-dev-only-do-not-override-1vr7spz).ant-typography, :where(.css-dev-o
     opacity: 0.8
 
 .home-heading-container
-  h2
-    color: $white
+  
   .show-more
     a
-      color: $white
       text-decoration: underline
 
 \:where(.css-dev-only-do-not-override-1vr7spz).ant-card
@@ -381,3 +372,10 @@ a:where(.css-dev-only-do-not-override-1vr7spz).ant-typography, :where(.css-dev-o
   a 
     p
       color: $white
+
+.coin-stats-name
+  .ant-typography
+    color: black
+
+.stats
+  color: black
