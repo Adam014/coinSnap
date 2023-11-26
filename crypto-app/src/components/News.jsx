@@ -1,23 +1,15 @@
-import React, { useState } from 'react';
-import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
-import moment from 'moment';
+import React from 'react';
+import { Typography, Row, Col, Card } from 'antd';
 
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
 import { useGetCryptoQuery } from '../services/cryptoApi';
 
-const { Text, Title } = Typography;
-const { Option } = Select;
+const { Title } = Typography;
 
 const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News'
 
 const News = ( { simplified } ) => {
-<<<<<<< HEAD
-  const { data: cryptoNews } = useGetCryptoNewsQuery({ count: simplified ? 6 : 12 });
-=======
-  const { data } = useGetCryptoQuery(100);
-  const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
-  const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
->>>>>>> 60ca724ad9be386b07972969e26df6d3eec87241
+  const { data: cryptoNews } = useGetCryptoNewsQuery({ count: simplified ? 6 : 20 });
 
   console.log(cryptoNews);
 

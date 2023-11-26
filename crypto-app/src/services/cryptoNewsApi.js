@@ -8,7 +8,6 @@ const cryptoNewsHeaders = {
 
 const createRequest = (url) => ({ url, headers: cryptoNewsHeaders });
 
-
 const baseUrl = 'https://crypto-news16.p.rapidapi.com';
 
 export const cryptoNewsApi = createApi({
