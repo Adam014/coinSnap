@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Menu, Typography, Avatar } from 'antd';
+import { Menu, Typography, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
-import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
+import { HomeOutlined, BulbOutlined, FundOutlined } from '@ant-design/icons';
+import GitHubButton from "react-github-btn";
 
 import cryptoLogo from '../images/cryptoLogo.png';
 
@@ -26,6 +27,9 @@ const Navbar = () => {
                         <Link to="/news">News</Link>
                     </Menu.Item>
                 </Menu>
+                <div className='github-btn'>
+                    <GitHubButton href="https://github.com/Adam014/rapidCrypto" data-size="large" data-show-count="true">Star this on Github</GitHubButton>
+                </div>
             </div>
         </div>
     )
