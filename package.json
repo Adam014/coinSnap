@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "html-react-parser": "^4.2.2",
-    "react-router-dom": "^5.2.1"
-  }
-}
